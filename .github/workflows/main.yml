@@ -15,10 +15,11 @@ jobs:
         name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v0.6.0'
         with:
-          token_format: 'access_token'
+          # token_format: 'access_token'
+          # token_format: 'id_token'
           workload_identity_provider: 'projects/732332336349/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-          service_account: '732332336349-compute@developer.gserviceaccount.com'
-          project_id: 'awesome-tts-326114'
+          service_account: 'github-service-account@awesome-tts-326114.iam.gserviceaccount.com'
+          # project_id: 'awesome-tts-326114'
       # - name: Setup tmate session
       #   uses: mxschmitt/action-tmate@v3
       # - uses: ./action-a

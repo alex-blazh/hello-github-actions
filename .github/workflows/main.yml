@@ -4,6 +4,9 @@ jobs:
   build:
     name: Hello world action
     runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
     steps:
     # actions/checkout MUST come before auth
       - uses: 'actions/checkout@v3'
